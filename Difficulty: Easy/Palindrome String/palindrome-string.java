@@ -1,16 +1,19 @@
 class Solution {
     boolean isPalindrome(String s) {
         // code here
-        int left = 0;
-        int right = s.length()-1;
-        while(left < right){
-        if (s.charAt(left) != s.charAt(right)) {
-             return false;
+        char[] ch = s.toCharArray();
+        int i = 0;
+        int j = ch.length-1;
+        
+        while(j>i){
+            if(ch[i] == ch[j]){
+                i++;
+                j--;
+            }
+           else{
+               return false;
+           }
         }
-        left++;
-        right--;
-       } 
-       
-        return true;    
+        return true;
     }
 }
