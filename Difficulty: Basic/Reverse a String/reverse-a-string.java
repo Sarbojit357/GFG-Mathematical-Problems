@@ -2,16 +2,18 @@
 
 class Solution {
     public static String reverseString(String s) {
-       char[] arr = s.toCharArray();
-       int i = 0;
-       int j = s.length() - 1;
-       while(j>i){
-           char temp = arr[i];
-           arr[i] = arr[j];
-           arr[j] = temp;
-           i++;
-           j--;
-       }
-       return new String(arr);
-    }   
+        // code here
+        char[] ch = s.toCharArray();
+        int i = 0;
+        int j = ch.length - 1;
+        while(j>i){
+            char temp = ch[i];
+            ch[i] = ch[j];
+            ch[j] = temp;
+            
+            i++;
+            j--;
+        }
+        return String.valueOf(ch);
+    }
 }
