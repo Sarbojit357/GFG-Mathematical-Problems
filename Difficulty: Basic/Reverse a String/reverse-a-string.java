@@ -14,6 +14,6 @@ class Solution {
             i++;
             j--;
         }
-        return String.valueOf(ch);
+        return new String(ch);
     }
 }
